@@ -1,7 +1,6 @@
 # Geocoding exercise
 
-This exercise is, first and foremost, something fun to work on.There are 3 tasks to work through. If you have any questions 
-at all please shoot us an email and we'll reply as soon as we can. 
+This exercise is, first and foremost, something fun to work on.There are 3 tasks to work through. 
 
 ## Get started
 Assuming you have a working Ruby environment, from the repo root do:
