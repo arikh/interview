@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Lat,Long</th>
+        <th scope="col">Address</th>
+        <th scope="col">Distance from DC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% results.each do |result| %>
+      <tr>
+        <td><%= result[0] %></td>
+        <td><%= result[1] %></td>
+        <td><%= result[2] %></td>
+      </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>
