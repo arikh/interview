@@ -4,18 +4,44 @@ class Address
   attr_accessor :lat, :lng, :full_address   
 
   def geocode
-    Geocoder.coordinates(full_address)
+    coords = Geocoder.coordinates(full_address)
+    @lat = coords[0]
+    @lng = coords[1]
+    coords
   end
 
   def reverse_geocode
-    Geocoder.address([lat, lng])
+    address = Geocoder.address([lat, lng])
+    @full_address = address
+    address
+  end  
+
+  def coordinates
+    [lat,lng]
+  end
+  
+  def distance(other_coordinates)
+    Geocoder::Calculations.distance_between(coordinates, other_coordinates)
+  end
+
+  def miles_to(location)
+    distance location.coordinates
   end
 
   def distance_from_dc
-    Geocoder::Calculations.distance_between([lat,lng], dc_cordinates)
+    distance dc_cordinates
   end
 
   def dc_cordinates
     Geocoder.coordinates("1600 Pennsylvania Avenue NW Washington, D.C. 20500")
+  end  
+
+  def geocoded?
+    !lat.nil? and !lng.nil?
   end
+
+  def reverse_geocoded?
+    !full_address.nil?
+  end
+
 end
