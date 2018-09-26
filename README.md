@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Geocoding exercise
-
-This exercise is, first and foremost, something fun to work on.There are 3 tasks to work through. 
-=======
 # Interview exercise
 
 This exercise is, first and foremost, something fun to work on. It's designed to give you a taste of what it's like to 
