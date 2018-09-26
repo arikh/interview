@@ -31,14 +31,4 @@ class Main < Sinatra::Base
     erb :index , locals: { results: records}
   end
 
-  get '/test' do 
-    add_obj = Address.new
-    # add_obj.lat = 40.181306
-    # add_obj.lng = -80.265949
-    # add_obj.reverse_geocode
-
-    add_obj.full_address = '1600 Pennsylvania AVE, WASHINGTON, PA 20500, United States'
-    add_obj.geocode
-    erb :test , locals: { results: add_obj.geocoded?}
-  end
 end

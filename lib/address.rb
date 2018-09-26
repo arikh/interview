@@ -24,8 +24,8 @@ class Address
     Geocoder::Calculations.distance_between(coordinates, other_coordinates)
   end
 
-  def miles_to(location)
-    distance location.coordinates
+  def miles_to(other_address)
+    distance other_address.coordinates
   end
 
   def distance_from_dc
