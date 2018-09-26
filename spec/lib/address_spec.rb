@@ -1,11 +1,13 @@
 RSpec.describe Address do
   let(:full_address) { "1600 Pennsylvania AVE, WASHINGTON, PA 20500, United States" }
+
   let(:lat) { 40.181306 }
   let(:lng) { -80.265949 }
 
   subject(:address) { described_class.new }
 
   describe 'geocoding' do
+
     let(:result) { [lat, lng] }
 
     it 'geocodes with Geocoder API' do
@@ -16,7 +18,8 @@ RSpec.describe Address do
 
     it 'is geocoded' do 
       address.full_address = full_address
-      address.geocode     
+      address.geocode    
+
       expect(address).to be_geocoded
     end
   end

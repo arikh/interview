@@ -2,6 +2,7 @@ require 'sinatra/base'
 Dir['./lib/*.rb'].each { |f| require f }
 
 class Main < Sinatra::Base
+
   get '/' do  
     
     LAT_LONG = [
@@ -30,5 +31,4 @@ class Main < Sinatra::Base
 
     erb :index , locals: { results: records}
   end
-
 end
