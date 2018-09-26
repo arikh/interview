@@ -3,7 +3,6 @@
 This exercise is, first and foremost, something fun to work on. It's designed to give you a taste of what it's like to 
 work at Airspace and for us to get a sense of how you program. There are 3 tasks to work through. If you have any questions 
 at all please shoot us an email and we'll reply as soon as we can. 
->>>>>>> 57c43a1698b73c532de74bad814214bfeb2c3e05
 
 ## Get started
 Assuming you have a working Ruby environment, from the repo root do:
